@@ -2,16 +2,12 @@
     "name": "Testing",
     "version": "1.0",
     "description": "start!",
-    "permissions": ["activeTab", "<all_urls>", "tabs"],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
+    "permissions": ["activeTab", "<all_urls>", "tabs", "storage"],
     "content_scripts": [ {
       "js": ["jquery.min.js"],
-      "matches": [""]
+      "matches": ["<all_urls>"]
     }],
-    "brower_action": {
+    "browser_action": {
       "default_title": "getLink",
       "default_popup": "popup.html"
     },
